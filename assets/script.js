@@ -5,26 +5,26 @@ const menuLinks = document.querySelectorAll(".close-menu");
 
 // Open Menu
 menuToggle.addEventListener("click", () => {
-    mobileMenu.classList.remove("-translate-x-full");
+  mobileMenu.classList.remove("-translate-x-full");
 });
 
 // Close Menu (On Button Click)
 closeMenu.addEventListener("click", () => {
-    mobileMenu.classList.add("-translate-x-full");
+  mobileMenu.classList.add("-translate-x-full");
 });
 
 // Close Menu (On Clicking Any Menu Link)
 menuLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        mobileMenu.classList.add("-translate-x-full");
-    });
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("-translate-x-full");
+  });
 });
 
 // Close Menu (On Clicking Outside)
 document.addEventListener("click", (event) => {
-    if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-        mobileMenu.classList.add("-translate-x-full");
-    }
+  if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+    mobileMenu.classList.add("-translate-x-full");
+  }
 });
 
 var options = {
@@ -101,6 +101,33 @@ function resetAutoScroll() {
 
 // Start auto-scrolling when page loads
 startAutoScroll();
+
+// Contact Form
+document.getElementById("contact-form").addEventListener("submit", async function (e) {
+  e.preventDefault(); // Prevent page refresh
+
+  const formData = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value
+  };
+
+  const response = await fetch("https://formspree.io/f/mjkyedyr", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(formData)
+  });
+
+  const result = await response.json();
+  if (response.ok) {
+    alert("Message sent successfully!");
+  } else {
+    alert("Error: " + result.error);
+  }
+});
 
 // Event Prevention 
 document.addEventListener("contextmenu", (event) => event.preventDefault());
