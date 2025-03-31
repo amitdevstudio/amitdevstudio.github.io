@@ -1,0 +1,13 @@
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Disable text selection */
+body {
+  user-select: none; 
+}
+
+/* Disable image dragging */
+img {
+  pointer-events: none;
+}

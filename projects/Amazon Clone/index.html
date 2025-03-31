@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone - AmitDevStudio</title>
+    <meta name="description" content="Experience seamless online shopping with our Amazon clone. Browse products, add to cart, and enjoy a fully responsive e-commerce platform with smooth transactions.">
+    <link href="src/output.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="border-box text-white bg-slate-300">
+    <header class="bg-[#131921] flex items-center flex-wrap p-2 justify-evenly">
+        <a href="" class="flex hover:border-1 rounded border-white border-box">
+            <img class="lg:w-[120px] lg:h-[45px]" src="assets/images/amazon_logo.png" alt="">
+            <span class="font-bold relative lg:mt-2 lg:-ml-2 lg:px-1">.in</span>
+        </a>
+        <a href="" class="flex hover:border-1 border-white rounded border-box">
+            <span class="lg:pt-4.5 lg:px-2 relative"><i class="fa-solid fa-location-dot"></i></span>
+            <div class="grid font-bold px-1">
+                <p class="text-[12px] pt-2">Delivering to Lucknow 226002</p>
+                <p class="text-[14px]">Update location</p>
+            </div>
+        </a>
+        <div class="flex text-black">
+            <select name="category" id="dropdown" class="bg-gray-200 rounded-l cursor-pointer">
+                <option value="All">All</option>
+            </select>
+            <input type="text" name="search" id="search" class="bg-white lg:w-[660px] h-[38px] lg:px-2 outline-none" placeholder="Search Amazon.in">
+            <button class="bg-[#febd69] lg:px-2 rounded-r"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="flex hover:border-1 border-white rounded border-box lg:p-2 cursor-pointer">
+            <span><i class="fa-solid fa-flag"></i></span>
+            <span class="lg:ml-1">EN</span>
+            <span class="lg:ml-1"><i class="fa-solid fa-caret-down"></i></span>
+        </div>
+        <a href="" class="flex hover:border-1 border-white rounded border-box">
+            <div class="grid font-bold px-1">
+                <p class="lg:text-[12px] pt-2">Hello, sign in</p>
+                <p class="lg:text-[14px]">Account & Lists <i class="fa-solid fa-caret-down"></i></p>
+            </div>
+        </a>
+        <a href="" class="flex hover:border-1 border-white rounded border-box">
+            <div class="grid font-bold lg:px-1">
+                <p class="lg:text-[12px] pt-2">Returns</p>
+                <p class="lg:text-[14px]">& Orders <i class="fa-solid fa-caret-down"></i></p>
+            </div>
+        </a>
+        <a href="" class="lg:text-2xl lg:p-2 hover:border-1 border-white font-bold rounded border-box lg:pt-2"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+    </header>    
+    <nav class="hidden lg:block bg-[#232F3E] lg:text-md p-2 border-box font-semibold">
+        <ul class="flex items-center  justify-around gap-1">
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded"><i class="fa-solid fa-bars"></i> All</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">Fresh</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">MX Player</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">Sell</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">Best Seller</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">Mobiles</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">Today's Deals</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">Customer Service</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">Electronics</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">Prime <i class="fa-solid fa-caret-down"></i></li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">New Releases</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">Amazon Pay</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">Home & Kitchen</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">Fashion</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">Computers</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">Books</li>
+            <li class="cursor-pointer hover:border-1 border-white p-1 rounded">Car & Motorbike</li>
+        </ul>
+    </nav>
+    <div class="relative text-black">
+        <img src="assets/images/hero_image.jpg" alt="">
+        <div class=" w-full absolute top-0 flex flex-wrap lg:w-[95%] justify-between lg:ml-10 lg:mt-60">
+            <div class="box bg-white grid p-6 mt-8 lg:w-[350px]">
+                <h2 class="text-xl font-bold">Continue shopping deals</h2>
+                <div class="grid grid-flow-col grid-rows-2 items-center gap-4 mt-4">
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_two_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_two_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                </div>
+                <p class="text-blue-600">See all details</p>
+            </div>
+            <div class="box bg-white grid p-6 mt-8 lg:w-[350px]">
+                <h2 class="text-xl font-bold">Continue shopping deals</h2>
+                <div class="grid grid-flow-col grid-rows-2 items-center gap-4 mt-4">
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_two_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_two_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                </div>
+                <p class="text-blue-600">See all details</p>
+            </div>
+            <div class="box bg-white grid p-6 mt-8 lg:w-[350px]">
+                <h2 class="text-xl font-bold">Continue shopping deals</h2>
+                <div class="grid grid-flow-col grid-rows-2 items-center gap-4 mt-4">
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_two_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_two_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                </div>
+                <p class="text-blue-600">See all details</p>
+            </div>
+            <div class="box bg-white grid p-6 mt-8 lg:w-[350px]">
+                <h2 class="text-xl font-bold">Continue shopping deals</h2>
+                <div class="grid grid-flow-col grid-rows-2 items-center gap-4 mt-4">
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_two_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_two_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                </div>
+                <p class="text-blue-600">See all details</p>
+            </div>
+            <div class="lg:w-full mt-6 bg-white">
+                <div class="flex p-4 items-center">
+                    <h2 class="text-2xl font-bold">More items to consider</h2>
+                    <a href="" class="text-blue-600 text-md font-semibold ml-4">See more</a>
+                </div>
+                <div class="flex grid-flow-col justify-around gap-4">
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="lg:w-full mt-6 bg-white">
+                <div class="flex p-4 items-center">
+                    <h2 class="text-2xl font-bold">Related to items you've viewed</h2>
+                    <a href="" class="text-blue-600 text-md font-semibold ml-4">See more</a>
+                </div>
+                <div class="flex grid-flow-col justify-around gap-4">
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                    <a href=""><img src="assets/images/box_one_image.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#38485d] relative text-md p-2 flex justify-center lg:mt-[550px]">
+        <a href="">Back To top</a>
+    </div>
+    <footer class="bg-[#232F3E]">
+        <div class="container lg:w-[70%] mx-auto pt-12 mb-16">
+            <div class="flex text-md justify-around">
+                <ul>
+                    <p class="font-bold text-xl">Get to Know Us</p>
+                    <li>About Amazon</li>
+                    <li>Careers</li>
+                    <li>Press Releases</li>
+                    <li>Amazon Science</li>
+                </ul>
+                <ul>
+                    <p class="font-bold text-xl">Get to Know Us</p>
+                    <li>About Amazon</li>
+                    <li>Careers</li>
+                    <li>Press Releases</li>
+                    <li>Amazon Science</li>
+                </ul>
+                <ul>
+                    <p class="font-bold text-xl">Get to Know Us</p>
+                    <li>About Amazon</li>
+                    <li>Careers</li>
+                    <li>Press Releases</li>
+                    <li>Amazon Science</li>
+                    <li>About Amazon</li>
+                    <li>Careers</li>
+                    <li>Press Releases</li>
+                    <li>Amazon Science</li>
+                    <li>About Amazon</li>
+                    <li>Careers</li>
+                </ul>
+                <ul>
+                    <p class="font-bold text-xl">Get to Know Us</p>
+                    <li>About Amazon</li>
+                    <li>Careers</li>
+                    <li>Press Releases</li>
+                    <li>Amazon Science</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="mt-4">
+        <div class="flex items-center gap-4 p-4 justify-center">
+            <a href="">
+                <img src="assets/images/amazon_logo.png" class="w-[100px]" alt="">
+            </a>
+            <div class="border ml-10 flex border-box cursor-pointer items-center rounded p-2">
+                <i class="fa-solid fa-globe"></i>
+                <span class="font-semibold ml-2">English</span>
+                <span class="grid ml-2 -py-1">
+                    <i class="fa-solid fa-caret-up"></i>
+                    <i class="fa-solid fa-caret-down"></i>
+                </span>
+            </div>
+            <div class="border flex border-box cursor-pointer items-center p-2 rounded h-[50px]">
+                <i class="fa-solid fa-globe"></i>
+                <span class="font-semibold ml-2">India</span>
+            </div>
+        </div>
+        <div class="bg-[#131A22]">
+            <div class="container lg:w-[50%] justify-around text-xs lg:ml-72 pt-8">
+                <div class="flex grid-cols-4">
+                    <ul>
+                        <p class="font-bold text-md">Get to Know Us</p>
+                        <li>About Amazon</li>
+                        <li>Careers</li>
+                    </ul>
+                    <ul>
+                        <p class="font-bold text-md">Get to Know Us</p>
+                        <li>About Amazon</li>
+                        <li>Careers</li>
+                    </ul>
+                    <ul>
+                        <p class="font-bold text-md">Get to Know Us</p>
+                        <li>About Amazon</li>
+                        <li>Careers</li>
+                    </ul>
+                    <ul>
+                        <p class="font-bold text-md">Get to Know Us</p>
+                        <li>About Amazon</li>
+                        <li>Careers</li>
+                    </ul>
+                    <ul class="mt-8">
+                        <p class="font-bold text-md">Get to Know Us</p>
+                        <li>About Amazon</li>
+                        <li>Careers</li>
+                    </ul>
+                    <ul class="mt-8">
+                        <p class="font-bold text-md">Get to Know Us</p>
+                        <li>About Amazon</li>
+                        <li>Careers</li>
+                    </ul>
+                    <ul class="mt-8">
+                        <p class="font-bold text-md">Get to Know Us</p>
+                        <li>About Amazon</li>
+                        <li>Careers</li>
+                    </ul>
+                    <ul class="mt-8">
+                        <p class="font-bold text-md">Get to Know Us</p>
+                        <li>About Amazon</li>
+                        <li>Careers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#131A22] w-full">
+            <div class="py-6 text-center pt-16">
+                <a href="" class="ml-4 hover:underline">Conditions of Use & Sale</a>
+                <a href="" class="ml-4 hover:underline">Privacy Notice</a>
+                <a href="" class="ml-4 hover:underline">Interest-Based Ads</a>
+                <p class="mt-1">&copy; 1996-2025, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/script.js"></script>
+</body>
+</html>
