@@ -378,14 +378,12 @@
             <span class="absolute left-0 -bottom-1 w-full h-1 bg-white rounded-full"></span>
           </h2>
           <p class="text-lg mb-4">Subscribe to get the latest updates.</p>
-          <form class="lg:flex items-center">
+          <form action="https://formspree.io/f/xpwpjedv" method="post" class="lg:flex items-center">
             <input type="email"
               class="w-full rounded border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-base px-3 py-2 mr-2"
-              placeholder="Your email address" />
-            <button aria-label="subscribe"
-              class="text-white w-full mt-2 lg:w-1/2 lg:mt-0 bg-indigo-500 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-600 rounded">
-              Subscribe
-            </button>
+              placeholder="Your email address" required/>
+            <input type="submit" value="Subscribe" aria-label="subscribe"
+              class="text-white w-full mt-2 lg:w-1/2 cursor-pointer lg:mt-0 bg-indigo-500 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-600 rounded">
           </form>
         </div>
       </div>
