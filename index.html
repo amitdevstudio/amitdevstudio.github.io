@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" id="home" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,425 +9,42 @@
   <meta name="description"
     content="Discover Amit Kumar's Front-End Developer portfolio, showcasing responsive and visually appealing web designs. Explore projects, services, and contact for website development and maintenance." />
   <link href="src/output.css" rel="stylesheet" />
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <meta name="description"
+    content="AmitDevStudio is launching soon with powerful web solutions, stunning design, and performance-focused development. Stay tuned and subscribe for updates.">
 </head>
 
-<body class="bg-gray-900 text-white">
-  <header class="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md p-5 flex items-center justify-around z-50">
-    <a href="#home" class="flex text-2xl lg:text-3xl items-center font-semibold">
-      <span><i class="fa-solid fa-code"></i></span>
-      AmitDevStudio
-    </a>
-    <!-- Hamburger Menu Button (Only Visible on Mobile) -->
-    <button id="menu-toggle" class="md:hidden text-3xl focus:outline-none">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <!-- Desktop Navigation (Visible on Larger Screens) -->
-    <nav class="hidden md:flex md:items-center md:space-x-6">
-      <ul class="flex flex-col md:flex-row items-center text-xl space-y-4 md:space-y-0 md:space-x-4">
-        <li><a href="#home" class="hover:border-b-2">Home</a></li>
-        <li><a href="#about" class="hover:border-b-2">About</a></li>
-        <li><a href="#projects" class="hover:border-b-2">Projects</a></li>
-        <li><a href="#services" class="hover:border-b-2">Services</a></li>
-        <li><a href="#contact" class="hover:border-b-2">Contact</a></li>
-      </ul>
-    </nav>
-    <!-- Mobile Sliding Menu (Only for Small Screens) -->
-    <div id="mobile-menu"
-      class="fixed top-0 left-0 w-3/4 h-full bg-gray-900 text-white transform -translate-x-full transition-transform duration-500 ease-in-out flex flex-col items-center justify-center space-y-6 z-50">
-      <button id="close-menu" aria-label="close-menu" class="absolute top-5 right-5 text-3xl">
-        <i class="fa-solid fa-times"></i>
-      </button>
-      <ul class="flex flex-col items-center text-2xl space-y-4">
-        <li><a href="#home" class="hover:border-b-2 close-menu">Home</a></li>
-        <li>
-          <a href="#about" class="hover:border-b-2 close-menu">About</a>
-        </li>
-        <li>
-          <a href="#projects" class="hover:border-b-2 close-menu">Projects</a>
-        </li>
-        <li>
-          <a href="#services" class="hover:border-b-2 close-menu">Services</a>
-        </li>
-        <li>
-          <a href="#contact" class="hover:border-b-2 close-menu">Contact</a>
-        </li>
-      </ul>
+<body
+  class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center text-white px-6">
+  <div class="max-w-2xl w-full text-center space-y-8">
+    <!-- Logo (Optional) -->
+    <div class="text-4xl sm:text-5xl flex justify-center items-center font-extrabold tracking-tight">
+      <span class="text-red-500 mt-1 mr-2"><i class="fa-solid fa-code"></i></span>
+      AmitDev<span class="text-red-500">Studio</span>
     </div>
-  </header>
-  <section id="hero-section"
-    class="flex flex-col-reverse mt-10 md:flex-row items-center justify-center text-center md:text-left md:ml-16 lg:mt-2 md:pt-20 mx-auto space-y-6 md:space-y-0 md:space-x-10">
-    <div class="w-[90%] md:w-[60%] px-4 lg:mt-10">
-      <h2 class="text-3xl mt-4 md:text-7xl font-semibold">
-        Hi, I'm Amit Kumar
-      </h2>
-      <h1 class="text-4xl md:text-8xl font-bold text-blue-600">
-        <span id="typed-text"></span>
-      </h1>
-      <p class="text-lg md:text-xl lg:mt-3 font-semibold">
-        I'm a passionate Front-end Developer focused on creating responsive,
-        visually appealing, and user-friendly websites.
-      </p>
-      <ul class="flex flex-col md:flex-row text-lg md:text-xl mt-6 md:mt-8 space-y-3 md:space-y-0 md:space-x-4">
-        <li>
-          <a href="#projects" aria-label="projects"
-            class="border-2 border-purple-800 text-white bg-purple-900 hover:bg-transparent py-3 px-4 font-semibold rounded-full transition-all duration-300 flex items-center justify-center gap-2">
-            <i class="fas fa-folder-open"></i> View My Work
-          </a>
-        </li>
-        <li>
-          <a href="#contact" aria-label="contacts"
-            class="border-2 border-purple-800 text-white bg-purple-900 hover:bg-transparent py-3 px-4 font-semibold rounded-full transition-all duration-300 flex items-center justify-center gap-2">
-            <i class="fas fa-handshake"></i> Let's Work Together
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="w-[80%] md:w-[500px] mt-20 flex justify-center">
-      <img class="rounded-full w-48 md:w-full" src="assets/images/amitkumar.jpg" alt="Amit Kumar" />
-    </div>
-  </section>
-  <section id="about"
-    class="flex flex-col-reverse md:flex-row mx-auto mb-4 md:pt-8 md:ml-28 items-center space-y-8 md:space-x-10 mt-16 lg:mt-28 px-6">
-    <div class="w-[80%] md:w-[520px] mt-8 flex justify-center">
-      <img class="rounded-full w-48 hidden lg:flex md:w-full" src="assets/images/amitkumar.jpg" alt="Amit Kumar" />
-    </div>
-    <div class="w-full md:w-1/2 text-center md:text-left">
-      <h2 class="text-4xl md:text-7xl mb-4 font-semibold">About</h2>
-      <p class="text-lg md:text-2xl font-semibold">
-        I am a passionate Front-end Developer dedicated to crafting visually
-        appealing and highly responsive websites. With expertise in modern web
-        technologies, I strive to create seamless user experiences that bring
-        ideas to life. Whether it's building a personal portfolio or a dynamic
-        web application, I focus on clean design and efficient performance.
-      </p>
-      <div class="mt-6">
-        <h3 class="text-2xl font-bold md:text-4xl">Languages:</h3>
-        <ul class="flex justify-center md:justify-start items-center mt-4 text-xl md:text-3xl space-x-4 font-semibold">
-          <li class="text-orange-400 border-orange-400">
-            <i class="fa-brands fa-html5 mr-1"></i> HTML
-          </li>
-          <li class="text-blue-400 border-blue-400">
-            <i class="fa-brands fa-css3-alt mr-1"></i> CSS
-          </li>
-          <li class="text-yellow-400 border-yellow-400">
-            <i class="fa-brands fa-js mr-1"></i> JavaScript
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <section id="projects" class="body-font w-[95%] mx-auto relative">
-    <div class="container px-5 mx-auto">
-      <h2 class="text-5xl lg:text-7xl mb-3 font-semibold text-center">
-        Projects
-      </h2>
-      <div class="relative w-full overflow-hidden">
-        <!-- Project Wrapper -->
-        <div id="projectSlider" class="flex mx-auto transition-transform duration-500 ease-in-out space-x-4">
-          <!-- Project 1 -->
-          <div class="p-4 h-auto w-[98%] md:w-1/2 flex-shrink-0">
-            <div class="border-2 bg-gray-800 border-white border-opacity-60 rounded-lg overflow-hidden">
-              <img class="w-auto h-auto md:object-cover" src="assets/images/netflix-clone.png" alt="Netflix Clone" />
-              <div class="p-6">
-                <h1 class="title-font text-lg font-medium mb-3">
-                  Netflix Clone
-                </h1>
-                <p class="leading-relaxed mb-3">
-                  A modern Netflix UI clone built with React and Firebase.
-                </p>
-                <a href="https://amitdevstudio.github.io/netflix-clone/" target="_blank" aria-label="project-1"
-                  class="bg-yellow-400 text-gray-900 hover:bg-yellow-500 py-2 px-4 rounded-lg font-semibold inline-flex items-center">View
-                  Project</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Navigation Buttons Inside the Grid -->
-        <button id="prevBtn" aria-label="previous-button"
-          class="absolute left-2 top-1/2 cursor-pointer transform -translate-y-1/2 bg-gray-700 bg-opacity-80 hover:bg-gray-600 text-white font-semibold w-[40px] h-[40px] flex items-center justify-center rounded-full z-10">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button id="nextBtn" aria-label="next-button"
-          class="absolute right-2 top-1/2 cursor-pointer transform -translate-y-1/2 bg-yellow-400 bg-opacity-80 hover:bg-yellow-500 text-gray-900 font-semibold w-[40px] h-[40px] flex items-center justify-center rounded-full z-10">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <section id="services" class="body-font pt-12 w-[90%] mx-auto">
-    <h2 class="text-5xl lg:text-7xl font-semibold text-center">Services</h2>
-    <div class="container px-5 p-6 mx-auto flex flex-wrap">
-      <div class="flex flex-wrap -m-4">
-        <!-- Front-End Development -->
-        <div class="p-4 lg:w-1/2 md:w-full">
-          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
-            <div
-              class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-              <span class="text-3xl"><i class="fa-solid fa-code"></i></span>
-            </div>
-            <div class="flex-grow">
-              <h2 class="text-lg title-font font-medium mb-3">
-                Front-End Development
-              </h2>
-              <p class="leading-relaxed text-base">
-                Creating clean, structured, and visually appealing web
-                interfaces using modern technologies like HTML, CSS, and
-                JavaScript.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Responsive Web Development -->
-        <div class="p-4 lg:w-1/2 md:w-full">
-          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
-            <div
-              class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-              <span class="text-3xl"><i class="fa-solid fa-tv"></i></span>
-            </div>
-            <div class="flex-grow">
-              <h2 class="text-lg title-font font-medium mb-3">
-                Responsive Web Development
-              </h2>
-              <p class="leading-relaxed text-base">
-                Building modern, high-performance websites that adapt
-                seamlessly across all devices, ensuring an optimal user
-                experience.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Website Maintenance & Support -->
-        <div class="p-4 lg:w-1/2 md:w-full">
-          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
-            <div
-              class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-              <span class="text-3xl"><i class="fa-solid fa-screwdriver-wrench"></i></span>
-            </div>
-            <div class="flex-grow">
-              <h2 class="text-lg title-font font-medium mb-3">
-                Website Maintenance & Support
-              </h2>
-              <p class="leading-relaxed text-base">
-                Providing ongoing maintenance, updates, and performance
-                optimizations to keep your website running smoothly.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Performance & SEO Optimization -->
-        <div class="p-4 lg:w-1/2 md:w-full">
-          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
-            <div
-              class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-              <span class="text-3xl"><i class="fa-solid fa-chart-line"></i></span>
-            </div>
-            <div class="flex-grow">
-              <h2 class="text-lg title-font font-medium mb-3">
-                Performance & SEO Optimization
-              </h2>
-              <p class="leading-relaxed text-base">
-                Enhancing website speed, responsiveness, and search engine
-                visibility for improved reach and efficiency.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="contact"
-    class="grid lg:pt-8 relative sm:grid-cols-2 items-start gap-16 p-4 mt-16 mx-auto max-w-4xl font-[sans-serif]">
+    <!-- Headline -->
     <div>
-      <h1 class="text-4xl font-extrabold">Let's Talk</h1>
-      <p class="text-md mt-4">
-        Have some big idea or brand to develop and need help? Then reach out
-        we'd love to hear about your project and provide help.
+      <h2 class="text-3xl sm:text-4xl font-bold">We're Launching Soon</h2>
+      <p class="text-gray-300 mt-3 text-base sm:text-lg">
+        Our website is under construction. We're putting the final touches to bring you an amazing experience.
       </p>
-      <div class="mt-12">
-        <h2 class="font-bold text-4xl">Email</h2>
-        <ul class="mt-4">
-          <li class="flex items-center">
-            <div class="bg-[#e6e6e6cf] h-10 text-2xl w-10 rounded-full flex items-center justify-center shrink-0">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
-            <a href="mailto:amitdevstudio@gmail.com" class="text-[#007bff] text-xl ml-4">
-              <strong>amitdevstudio@gmail.com</strong>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="mt-12">
-        <h2 class="text-4xl font-bold">Socials</h2>
-        <ul class="flex mt-4 text-4xl lg:text-5xl space-x-4">
-          <li class="relative">
-            <a href="https://github.com/amitdevstudio" target="_blank" class="text-white" aria-label="GitHub Profile">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </li>
-          <li class="relative">
-            <a href="https://www.instagram.com/its.amitto.kun" target="_blank" class="text-red-500"
-              aria-label="Instagram Profile">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </li>
-          <li class="relative">
-            <a href="https://www.facebook.com/share/18So2JUBaN/" target="_blank" class="text-blue-500"
-              aria-label="Facebook Profile">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
     </div>
-    <form action="https://formspree.io/f/mjkyedyr" method="POST" class="ml-auto space-y-4">
-      <input type="text" name="name" placeholder="Name"
-          class="w-full rounded-md py-3 px-4 border-2 border-white text-white text-md outline-blue-500 focus:bg-transparent" required />
-      <input type="email" name="email" placeholder="Email"
-          class="w-full rounded-md py-3 px-4 border-2 border-white text-white text-md outline-blue-500 focus:bg-transparent" required />
-      <input type="text" name="subject" placeholder="Subject"
-          class="w-full rounded-md py-3 px-4 border-2 border-white text-white text-md outline-blue-500 focus:bg-transparent" required />
-      <textarea name="message" placeholder="Message" rows="6"
-          class="w-full rounded-md px-4 resize-none border-2 border-white text-white text-md pt-3 outline-blue-500 focus:bg-transparent" required></textarea>
-      <input type="submit" value="Send"
-          class="text-white bg-blue-600 hover:bg-blue-700 tracking-wide rounded-md text-xl cursor-pointer font-bold px-4 py-3 w-full !mt-6">
-  </form>
-  </section>
-  <footer class="body-font -ml-8 border-t-3 mt-16">
-    <div
-      class="container px-20 py-16 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-        <a href="#home"
-          class="flex title-font items-center text-3xl font-medium md:justify-start justify-center">
-          <span><i class="fa-solid fa-code"></i></span>
-          <span class="ml-2">AmitDevStudio</span>
-        </a>
-        <p class="mt-2 text-sm">
-          I'm a passionate Front-end Developer focused on creating responsive,
-          visually appealing, and user-friendly websites.
-        </p>
-      </div>
-      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2 class="title-font font-medium tracking-widest text-2xl mb-3 relative inline-block">
-            MENU
-            <span class="absolute left-0 -bottom-1 w-full h-1 bg-white rounded-full"></span>
-          </h2>
-          <nav class="list-none mb-10">
-            <ul class="grid">
-              <li><a href="#home" class="hover:border-b-3">Home</a></li>
-              <li><a href="#about" class="hover:border-b-3">About</a></li>
-              <li>
-                <a href="#projects" class="hover:border-b-3">Projects</a>
-              </li>
-              <li>
-                <a href="#services" class="hover:border-b-3">Services</a>
-              </li>
-              <li><a href="#contact" class="hover:border-b-3">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <nav class="list-none mb-10 space-y-1">
-            <h2 class="title-font font-medium tracking-widest text-2xl mb-3 relative inline-block">
-              SERVICES
-              <span class="absolute left-0 -bottom-1 w-full h-1 bg-white rounded-full"></span>
-            </h2>
-            <ul class="grid">
-              <li>
-                <span class="hover:border-b-3">Front-End Development</span>
-              </li>
-              <li>
-                <span class="hover:border-b-3">Responsive Web Development</span>
-              </li>
-              <li>
-                <span class="hover:border-b-3">Website Maintenance & Support</span>
-              </li>
-              <li>
-                <span class="hover:border-b-3">Performance & SEO Optimization</span>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="md:w-1/2 w-full px-4">
-          <h2 class="title-font font-medium tracking-widest text-2xl mb-3 relative inline-block">
-            NEWSLETTER
-            <span class="absolute left-0 -bottom-1 w-full h-1 bg-white rounded-full"></span>
-          </h2>
-          <p class="text-lg mb-4">Subscribe to get the latest updates.</p>
-          <form action="https://formspree.io/f/xpwpjedv" method="post" class="lg:flex items-center">
-            <input type="email"
-              class="w-full rounded border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-base px-3 py-2 mr-2"
-              placeholder="Your email address" required/>
-            <input type="submit" value="Subscribe" aria-label="subscribe"
-              class="text-white w-full mt-2 lg:w-1/2 cursor-pointer lg:mt-0 bg-indigo-500 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-600 rounded">
-          </form>
-        </div>
-      </div>
+    <!-- Email Subscription -->
+    <form action="https://formspree.io/f/xjkyjaqe" method="post" class="flex flex-col sm:flex-row items-center justify-center gap-3">
+      <input type="email" placeholder="Enter your email"
+        class="w-full sm:w-80 px-4 py-3 rounded-md bg-gray-800 border border-gray-700 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+        required>
+      <input type="submit" value="Notify Me"
+        class="px-6 py-3 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 cursor-pointer transition-all duration-300 text-white font-semibold rounded-md">
+        
+    </form>
+    <!-- Footer -->
+    <div class="text-sm text-gray-500 pt-4 border-t border-gray-700">
+      &copy; 2025 AmitDevStudio. All rights reserved.
     </div>
-    <div class="grid space-y-3 md:flex p-5 border-t-3 ml-8 justify-around items-center">
-      <p class="font-semibold">
-        &copy; 2025 AmitDevStudio. All rights reserved.
-      </p>
-      <a href="privacy&policy.html" aria-label="privacy&policy" target="_blank"
-        class="font-semibold hover:border-b-3">Privacy & Policy</a>
-      <ul class="flex text-3xl space-x-4">
-        <li class="relative">
-          <a href="https://github.com/amitdevstudio" target="_blank" class="text-white" aria-label="GitHub Profile">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </li>
-        <li class="relative">
-          <a href="https://www.instagram.com/its.amitto.kun" target="_blank" class="text-red-500"
-            aria-label="Instagram Profile">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </li>
-        <li class="relative">
-          <a href="https://www.facebook.com/share/18So2JUBaN/" target="_blank" class="text-blue-500"
-            aria-label="Facebook Profile">
-            <i class="fa-brands fa-facebook"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-  <script src="assets/script.js"></script>
-  <script>
-    // Contact Form
-document.getElementById("contact-form").addEventListener("submit", async function (e) {
-  e.preventDefault(); // Prevent page refresh
-
-  const formData = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value
-  };
-
-  const response = await fetch("https://formspree.io/f/mjkyedyr", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(formData)
-  });
-
-  const result = await response.json();
-  if (response.ok) {
-    alert("Message sent successfully!");
-  } else {
-    alert("Error: " + result.error);
-  }
-});
-  </script>
+  </div>
 </body>
 
 </html>
