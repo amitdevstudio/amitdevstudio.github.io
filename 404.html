@@ -1,37 +1,46 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-[#101014]">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 | AmittoWallpapers</title>
-  <link href="/src/output.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Custom font for better aesthetics - 'Inter' is a good choice for modern UIs */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Using Tailwind classes for background and text color directly on body */
+            /* Tailwind equivalent: bg-gray-100 text-gray-700 */
+            background-color: #101014;
+            /* Light gray background */
+            color: white;
+            /* Dark gray text color */
+        }
+    </style>
 </head>
 
-<body class="flex items-center justify-center min-h-screen bg-[#101014]">
-  <div class="bg-[#1a1a1a] rounded-2xl shadow-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 max-w-4xl">
-
-    <!-- Left: Text -->
-    <div class="text-center md:text-left flex-1">
-      <h1 class="text-6xl font-extrabold text-white mb-4">404</h1>
-      <p class="text-lg text-gray-300 mb-1 font-bold">Sorry, we cannot find the requested page.</p>
-      <p class="text-lg text-green-500 mb-6 font-bold">You are lost!</p>
-      <a href="/"
-        class="inline-flex font-bold items-center bg-green-600 hover:bg-green-700 transition-colors text-white px-6 py-2 rounded-full">
-        Go to Home
-        <svg class="w-5 h-5 ml-2 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M5 12h14M12 5l7 7-7 7"></path>
-        </svg>
-      </a>
+<body class="flex justify-center items-center min-h-screen">
+    <div class="text-center p-8 bg-[#201d1d] shadow-lg rounded-xl max-w-lg w-11/12 mx-auto sm:p-12">
+        <!-- Main 404 heading, using Tailwind's font sizes, weights, and colors -->
+        <h1 class="text-9xl font-extrabold text-white mb-4 animate-bounce">404</h1>
+        <!-- Page not found message, with responsive text size -->
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+            Page Not Found
+        </h2>
+        <!-- Explanatory text with adjusted line height -->
+        <p class="text-lg mb-8 leading-relaxed">
+            Oops! It looks like the page you're looking for doesn't exist. It might have been moved or deleted.
+        </p>
+        <!-- Button to go back home, with full Tailwind styling for appearance and hover effects -->
+        <a href="https://amitdevstudio.github.io"
+            class="inline-block px-8 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-md hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:scale-105">
+            Go to Homepage
+        </a>
     </div>
-
-    <!-- Right: Image -->
-    <div class="flex-1">
-      <img src="assets/images/web_zoro_5.png" alt="Zoro Lost" class="w-full max-w-xs mx-auto md:mx-0">
-    </div>
-  </div>
 </body>
 
 </html>
