@@ -8,10 +8,11 @@
   <link rel="icon" href="assets/images/amitkumar.jpg" type="image/x-icon" />
   <meta name="description"
     content="Explore the portfolio of Amit Kumar, a passionate front-end web developer specializing in modern, responsive websites using HTML, Tailwind CSS, and JavaScript. View projects, skills, and contact information.">
-  <link href="./src/output.css" rel="stylesheet" />
+  <link href="/src/output.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body class="min-h-screen bg-[#1e0e3f] text-white overflow-x-hidden">
@@ -66,7 +67,7 @@
     </div>
   </header>
   <!-- Hero Section -->
-  <section id="home" class="w-[90%] mx-auto min-h-screen flex items-center pt-24 md:pt-32">
+  <section id="home" class="w-[90%] mx-auto min-h-screen flex items-center md:pt-32">
     <div class="container mx-auto flex px-5 md:flex-row flex-col items-center justify-between">
       <div class="md:hidden lg:max-w-md lg:w-full md:w-1/2 w-5/6 mb-12 md:mb-0" data-aos="zoom-in" data-aos-delay="100">
         <img class="object-cover object-center rounded-full shadow-lg" alt="Amit Kumar - Frontend Developer"
@@ -81,19 +82,19 @@
           data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">Frontend Developer</h1>
         <p class="hidden md:block mb-8 text-lg leading-relaxed text-gray-200" data-aos="fade-up" data-aos-delay="500"
           data-aos-duration="800">
-          As a front-end developer, I specialize in building intuitive, responsive websites with HTML, CSS, JavaScript,
-          and frameworks like Tailwind CSS. I focus on creating seamless user experiences, optimizing performance, and
+          As a front-end developer, I specialize in building intuitive, responsive websites with <span class="text-orange-400 font-bold">HTML</span>, <span class="text-blue-400 font-bold">CSS</span>, <span class="text-yellow-400 font-bold">JavaScript</span>,
+          and frameworks like <span class="text-blue-400 font-bold">Tailwind CSS</span>. I focus on creating seamless user experiences, optimizing performance, and
           delivering clean, maintainable code for modern web applications.
         </p>
         <div class="flex justify-center mt-4">
           <a href="#projects" class="inline-flex text-white border-2 bg-blue-600 rounded-full border-blue-600
-           hover:bg-blue-700 hover:border-blue-700 duration-300 py-2 px-6
+           hover:bg-blue-700 hover:border-blue-700 duration-300 py-2 px-4
            focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 text-lg shadow-md"
             data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
             View Projects
           </a>
           <a href="#contact" class="ml-4 inline-flex text-white border-2 border-red-500 rounded-full bg-red-500
-           hover:bg-transparent hover:text-red-500 duration-300 py-2 px-6
+           hover:bg-transparent hover:text-red-500 duration-300 py-2 px-4
            focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-75 text-lg" data-aos="fade-up"
             data-aos-delay="1000" data-aos-duration="800">
             Hire Me
@@ -107,7 +108,7 @@
     </div>
   </section>
   <!-- About Page -->
-  <section id="about" class="scroll-mt-20 py-12 md:py-16 px-6 md:px-12 lg:px-24 text-white">
+  <section id="about" class="scroll-mt-20 -mt-24 py-4 md:py-16 px-6 md:px-12 lg:px-24 text-white">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <!-- Profile Image -->
       <div class="hidden md:flex justify-center md:justify-start" data-aos="fade-right" data-aos-delay="100"
@@ -120,13 +121,13 @@
         <h2
           class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-red-400"
           data-aos="fade-up" data-aos-delay="300">
-          👋 About Me
+          About Me
         </h2>
         <p class="text-lg text-gray-200 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
           Hey there! I'm <span class="font-semibold text-white">Amit</span>, a <span class="text-indigo-300">Front-End
             Developer</span> who loves bringing ideas to life on the web. My toolkit is built around <span
-            class="text-indigo-400 font-medium">HTML</span>, <span class="text-indigo-400 font-medium">CSS</span>, <span
-            class="text-indigo-400 font-medium">JavaScript</span>, and <span
+            class="text-orange-400 font-medium">HTML</span>, <span class="text-indigo-400 font-medium">CSS</span>, <span
+            class="text-yellow-400 font-medium">JavaScript</span>, and <span
             class="text-indigo-400 font-medium">Tailwind CSS</span>, allowing me to create elegant and responsive user
           interfaces.
         </p>
@@ -150,198 +151,435 @@
     </div>
   </section>
   <!-- Projects Section -->
-  <section id="projects" class="scroll-mt-12 py-16 md:py-24">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-white mb-12 md:mb-16" data-aos="fade-up"
-        data-aos-duration="800" data-aos-once="true">
-        My Latest Work
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        <div data-aos="zoom-in" data-aos-delay="100">
-          <!-- Project-1 -->
-          <div
-            class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-blue-600">
-            <img src="assets/images/project1.png" alt="Restaurant Website Project Preview"
-              class="w-full object-fill aspect-[16/9]" loading="lazy" />
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-white mb-3">Restaurant Website</h3>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">HTML5</span>
-                <span class="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Tailwind CSS</span>
-                <span class="bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full">JavaScript</span>
-                <span class="bg-yellow-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Responsive
-                  Design</span>
-              </div>
-              <div
-                class="flex flex-col sm:flex-row justify-start items-center space-y-3 sm:space-y-0 sm:space-x-4 mt-4">
-                <a href="https://tokyospoon.netlify.app/" target="_blank" rel="noopener noreferrer"
-                  class="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-5 py-2 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
-                  View Live
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0l-10 10" />
-                  </svg>
-                </a>
-                <a href="404.html" target="_blank" rel="noopener noreferrer"
-                  class="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-5 py-2 bg-gray-700 text-white font-medium rounded-lg shadow-md hover:bg-black transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-75">
-                  GitHub
-                  <i class="fa-brands fa-github text-lg"></i>
-                </a>
-              </div>
+  <section id="projects" class="scroll-mt-8 py-20 md:py-20 px-6 md:px-12 lg:px-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold inline-block relative
+        after:absolute after:w-4/6 after:h-1 after:left-0 after:right-0
+        after:-bottom-4 after:mx-auto after:bg-pink-400 after:rounded-full" data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
+          PROJECTS
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+
+        <!-- Project Cards -->
+        <!-- Project 1 -->
+        <div class="group card rounded-lg border-2 border-gray-500 overflow-hidden bg-gradient-to-br from-[#2d1b4e] to-[#1a0f2e] 
+          shadow-xl/30 transition-all hover:scale-105 duration-300" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="500">
+
+          <div class="aspect-video overflow-hidden">
+            <img src="https://readymadeui.com/images/food.webp" alt="Restaurant Website Preview"
+              class="w-full h-full object-cover" />
+          </div>
+
+          <div class="p-6">
+            <span class="text-sm text-orange-400 font-medium">
+              HTML • Tailwind • JavaScript
+            </span>
+
+            <h3 class="text-lg font-semibold mt-2 text-white">
+              Restaurant Website
+            </h3>
+
+            <p class="text-slate-200 text-sm mt-2 line-clamp-3">
+              A responsive restaurant site with menu showcase, online
+              reservation form, and smooth scroll animations.
+            </p>
+
+            <div class="flex gap-3 mt-4">
+              <a href="#"
+                class="px-4 py-2 text-sm rounded-md border-2 border-red-500 bg-red-500 text-white font-medium hover:bg-transparent transition">
+                Live Demo
+              </a>
+              <a href="#"
+                class="px-4 py-2 text-sm rounded-md border border-white text-white hover:bg-white/10 transition">
+                GitHub
+              </a>
             </div>
           </div>
         </div>
-        <!-- Project-2 -->
-        <div data-aos="zoom-in" data-aos-delay="200">
-          <div
-            class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-blue-600">
-            <img src="assets/images/project2.png" alt="Restaurant Website Project Preview"
-              class="w-full object-cover aspect-[16/9]" loading="lazy" />
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-white mb-3">Anime Wallpaper Website</h3>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">HTML5</span>
-                <span class="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Tailwind CSS</span>
-                <span class="bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full">JavaScript</span>
-                <span class="bg-yellow-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Responsive
-                  Design</span>
-              </div>
-              <div
-                class="flex flex-col sm:flex-row justify-start items-center space-y-3 sm:space-y-0 sm:space-x-4 mt-4">
-                <a href="https://amittowallpapers.netlify.app/" target="_blank" rel="noopener noreferrer"
-                  class="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-5 py-2 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
-                  View Live
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0l-10 10" />
-                  </svg>
-                </a>
-                <a href="404.html" target="_blank" rel="noopener noreferrer"
-                  class="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-5 py-2 bg-gray-700 text-white font-medium rounded-lg shadow-md hover:bg-black transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-75">
-                  GitHub
-                  <i class="fa-brands fa-github text-lg"></i>
-                </a>
-              </div>
+
+        <!-- Project 2 -->
+        <div class="group card rounded-lg border-2 border-gray-500 overflow-hidden bg-gradient-to-br from-[#2d1b4e] to-[#1a0f2e] 
+          shadow-xl/30 transition-all hover:scale-105 duration-300" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="500"> 
+
+          <div class="aspect-video overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&h=400&fit=crop" alt="Anime Wallpaper Website Preview"
+              class="w-full h-full object-cover" />
+          </div>
+
+          <div class="p-6">
+            <span class="text-sm text-orange-400 font-medium">
+              HTML • Tailwind • JavaScript
+            </span>
+
+            <h3 class="text-lg font-semibold mt-2 text-white">
+              Anime Wallpaper Gallery
+            </h3>
+
+            <p class="text-slate-200 text-sm mt-2 line-clamp-3">
+              A sleek wallpaper gallery with category filters, lazy-loaded
+              images, and one-click HD downloads.
+            </p>
+
+            <div class="flex gap-3 mt-4">
+              <a href="#"
+                class="px-4 py-2 text-sm rounded-md border-2 border-red-500 bg-red-500 text-white font-medium hover:bg-transparent transition">
+                Live Demo
+              </a>
+              <a href="#"
+                class="px-4 py-2 text-sm rounded-md border border-white text-white hover:bg-white/10 transition">
+                GitHub
+              </a>
             </div>
           </div>
         </div>
+
+        <!-- Project 3 -->
+        <div class="group card rounded-lg border-2 border-gray-500 overflow-hidden bg-gradient-to-br from-[#2d1b4e] to-[#1a0f2e] 
+          shadow-xl/30 transition-all hover:scale-105 duration-300" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="500">
+
+          <div class="aspect-video overflow-hidden">
+            <img src="https://readymadeui.com/images/food.webp" alt="Project Preview"
+              class="w-full h-full object-cover" />
+          </div>
+
+          <div class="p-6">
+            <span class="text-sm text-orange-400 font-medium">
+              React • Tailwind • API
+            </span>
+
+            <h3 class="text-lg font-semibold mt-2 text-white">
+              Developer Portfolio Website
+            </h3>
+
+            <p class="text-slate-200 text-sm mt-2 line-clamp-3">
+              A modern personal portfolio with smooth animations, responsive
+              layout, and optimized performance.
+            </p>
+
+            <div class="flex gap-3 mt-4">
+              <a href="#"
+                class="px-4 py-2 text-sm rounded-md border-2 border-red-500 bg-red-500 text-white font-medium hover:bg-transparent transition">
+                Live Demo
+              </a>
+              <a href="#"
+                class="px-4 py-2 text-sm rounded-md border border-white text-white hover:bg-white/10 transition">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="group card rounded-lg border-2 border-gray-500 overflow-hidden bg-gradient-to-br from-[#2d1b4e] to-[#1a0f2e] 
+          shadow-xl/30 transition-all hover:scale-105 duration-300" data-aos="zoom-in" data-aos-delay="700" data-aos-duration="500">
+
+          <div class="aspect-video overflow-hidden">
+            <img src="https://readymadeui.com/images/food.webp" alt="Project Preview"
+              class="w-full h-full object-cover" />
+          </div>
+
+          <div class="p-6">
+            <span class="text-sm text-orange-400 font-medium">
+              React • Tailwind • API
+            </span>
+
+            <h3 class="text-lg font-semibold mt-2 text-white">
+              Developer Portfolio Website
+            </h3>
+
+            <p class="text-slate-200 text-sm mt-2 line-clamp-3">
+              A modern personal portfolio with smooth animations, responsive
+              layout, and optimized performance.
+            </p>
+
+            <div class="flex gap-3 mt-4">
+              <a href="#"
+                class="px-4 py-2 text-sm rounded-md border-2 border-red-500 bg-red-500 text-white font-medium hover:bg-transparent transition">
+                Live Demo
+              </a>
+              <a href="#"
+                class="px-4 py-2 text-sm rounded-md border border-white text-white hover:bg-white/10 transition">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="group card rounded-lg border-2 border-gray-500 overflow-hidden bg-gradient-to-br from-[#2d1b4e] to-[#1a0f2e] 
+          shadow-xl/30 transition-all hover:scale-105 duration-300" data-aos="zoom-in" data-aos-delay="900" data-aos-duration="500">
+
+          <div class="aspect-video overflow-hidden">
+            <img src="https://readymadeui.com/images/food.webp" alt="Project Preview"
+              class="w-full h-full object-cover" />
+          </div>
+
+          <div class="p-6">
+            <span class="text-sm text-orange-400 font-medium">
+              React • Tailwind • API
+            </span>
+
+            <h3 class="text-lg font-semibold mt-2 text-white">
+              Developer Portfolio Website
+            </h3>
+
+            <p class="text-slate-200 text-sm mt-2 line-clamp-3">
+              A modern personal portfolio with smooth animations, responsive
+              layout, and optimized performance.
+            </p>
+
+            <div class="flex gap-3 mt-4">
+              <a href="#"
+                class="px-4 py-2 text-sm rounded-md border-2 border-red-500 bg-red-500 text-white font-medium hover:bg-transparent transition">
+                Live Demo
+              </a>
+              <a href="#"
+                class="px-4 py-2 text-sm rounded-md border border-white text-white hover:bg-white/10 transition">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="group card rounded-lg border-2 border-gray-500 overflow-hidden bg-gradient-to-br from-[#2d1b4e] to-[#1a0f2e] 
+          shadow-xl/30 transition-all hover:scale-105 duration-300" data-aos="zoom-in" data-aos-delay="1100" data-aos-duration="500">
+
+          <div class="aspect-video overflow-hidden">
+            <img src="https://readymadeui.com/images/food.webp" alt="Project Preview"
+              class="w-full h-full object-cover" />
+          </div>
+
+          <div class="p-6">
+            <span class="text-sm text-orange-400 font-medium">
+              React • Tailwind • API
+            </span>
+
+            <h3 class="text-lg font-semibold mt-2 text-white">
+              Developer Portfolio Website
+            </h3>
+
+            <p class="text-slate-200 text-sm mt-2 line-clamp-3">
+              A modern personal portfolio with smooth animations, responsive
+              layout, and optimized performance.
+            </p>
+
+            <div class="flex gap-3 mt-4">
+              <a href="#"
+                class="px-4 py-2 text-sm rounded-md border-2 border-red-500 bg-red-500 text-white font-medium hover:bg-transparent transition">
+                Live Demo
+              </a>
+              <a href="#"
+                class="px-4 py-2 text-sm rounded-md border border-white text-white hover:bg-white/10 transition">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Duplicate card for more projects -->
+
       </div>
     </div>
   </section>
-  <!-- Services Section -->
-  <section id="services" class="scroll-mt-20 py-16 md:py-24 px-6 md:px-12 lg:px-24">
-    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-      <div class="mb-12 md:mb-16" data-aos="fade-up" data-aos-delay="100">
-        <h2 class="text-center text-4xl sm:text-5xl font-extrabold text-white">Services I Offer</h2>
+
+  <!-- Service -->
+  <section id="services" class="scroll-mt-12 -mt-20 py-20 md:py-16 px-6 md:px-12 lg:px-24">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header Section -->
+      <div class="text-center">
+        <h2 class="text-3xl mb-14 font-extrabold inline-block relative
+        after:absolute after:w-4/6 after:h-1 after:left-0 after:right-0
+        after:-bottom-4 after:mx-auto after:bg-pink-400 after:rounded-full" data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
+          What I Do
+        </h2>
       </div>
-      <div class="grid gap-8 sm:grid-cols-2 md:gap-12 xl:grid-cols-3">
+
+      <!-- Features Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Feature 1: Frontend Development -->
         <div
-          class="flex flex-col rounded-xl border border-gray-700 bg-gray-800 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-indigo-500"
-          data-aos="fade-up" data-aos-delay="200">
-          <h3 class="mb-3 text-2xl font-bold text-indigo-400">Responsive Web Design</h3>
-          <p class="mb-6 text-gray-300 leading-relaxed">
-            I create mobile-friendly, fluid designs that look stunning and function flawlessly on <strong>all screen
-              sizes</strong>,
-            leveraging the power of Tailwind CSS and modern layout strategies.
-          </p>
-          <a href="404.html"
-            class="mt-auto inline-flex items-center text-indigo-500 font-semibold transition-colors duration-200 hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
-            See Projects
-            <svg class="w-4 h-4 ml-1 transform transition-transform duration-200 group-hover:translate-x-1" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          class="group shadow-sm rounded-3xl shadow-xl/30 border-2 border-gray-500 overflow-hidden bg-gradient-to-br from-[#2d1b4e] to-[#1a0f2e] p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="500">
+          <div
+            class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
             </svg>
-          </a>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-xl font-bold text-blue-600 mb-3">Frontend Development</h3>
+            <p class="text-gray-200 leading-relaxed mb-6">
+              Crafting responsive, interactive, and pixel-perfect UIs using React, Next.js, and Tailwind CSS.
+            </p>
+            <button
+              class="flex cursor-pointer items-center justify-between w-full p-4 border-2 border-blue-600 bg-blue-600 rounded-2xl group/btn hover:bg-transparent transition-all duration-300">
+              <span class="font-semibold group-hover/btn:text-white">View Projects</span>
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.1313 9.75H3V8.25H12.1313L7.93125 4.05L9 3L15 9L9 15L7.93125 13.95L12.1313 9.75Z"
+                    fill="currentColor" class="text-blue-600"></path>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
+
+        <!-- Feature 2: Backend & APIs -->
         <div
-          class="flex flex-col rounded-xl border border-gray-700 bg-gray-800 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-indigo-500"
-          data-aos="fade-up" data-aos-delay="300">
-          <h3 class="mb-3 text-2xl font-bold text-indigo-400">High-Converting Landing Pages</h3>
-          <p class="mb-6 text-gray-300 leading-relaxed">
-            I build fast, highly attractive, and <strong>conversion-focused</strong> landing pages meticulously crafted
-            to capture
-            leads and powerfully reflect your brand's unique identity.
-          </p>
-          <a href="404.html"
-            class="mt-auto inline-flex items-center text-indigo-500 font-semibold transition-colors duration-200 hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
-            See Examples
-            <svg class="w-4 h-4 ml-1 transform transition-transform duration-200 group-hover:translate-x-1" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          class="group shadow-sm rounded-3xl shadow-xl/30 border-2 border-gray-500 overflow-hidden bg-gradient-to-br from-[#2d1b4e] to-[#1a0f2e] p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="500">
+          <div
+            class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
             </svg>
-          </a>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-xl font-bold text-emerald-500 mb-3">Backend & Databases</h3>
+            <p class="text-gray-200 leading-relaxed mb-6">
+              Building robust server-side logic, RESTful APIs, and managing scalable SQL/NoSQL databases.
+            </p>
+            <button
+              class="flex cursor-pointer items-center justify-between w-full p-4 border-2 border-emerald-600 bg-emerald-600 rounded-2xl group/btn hover:bg-transparent transition-all duration-300">
+              <span class="font-semibold group-hover/btn:text-white">Tech Stack</span>
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.1313 9.75H3V8.25H12.1313L7.93125 4.05L9 3L15 9L9 15L7.93125 13.95L12.1313 9.75Z"
+                    fill="currentColor" class="text-emerald-600"></path>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
+
+        <!-- Feature 3: Performance Optimization -->
         <div
-          class="flex flex-col rounded-xl border border-gray-700 bg-gray-800 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-indigo-500"
-          data-aos="fade-up" data-aos-delay="400">
-          <h3 class="mb-3 text-2xl font-bold text-indigo-400">Custom Portfolio Websites</h3>
-          <p class="mb-6 text-gray-300 leading-relaxed">
-            Perfect for freelancers, artists, and creatives—I develop bespoke portfolio sites with beautiful, intuitive,
-            and <strong>structured layouts</strong> to powerfully showcase your best work.
-          </p>
-          <a href="404.html"
-            class="mt-auto inline-flex items-center text-indigo-500 font-semibold transition-colors duration-200 hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
-            View Portfolios
-            <svg class="w-4 h-4 ml-1 transform transition-transform duration-200 group-hover:translate-x-1" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          class="group shadow-sm rounded-3xl shadow-xl/30 border-2 border-gray-500 overflow-hidden bg-gradient-to-br from-[#2d1b4e] to-[#1a0f2e] p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="500">
+          <div
+            class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 14 4-4"></path>
+              <path d="M3.34 19a10 10 0 1 1 17.32 0"></path>
             </svg>
-          </a>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-xl font-bold text-purple-500 mb-3">Speed Optimization</h3>
+            <p class="text-gray-200 leading-relaxed mb-6">
+              Ensuring lighting-fast load times and perfect Core Web Vitals for the best SEO performance.
+            </p>
+            <button
+              class="flex cursor-pointer items-center justify-between w-full p-4 border-2 border-purple-600 bg-purple-600 rounded-2xl group/btn hover:bg-transparent transition-all duration-300">
+              <span class="font-semibold group-hover/btn:text-white">Learn More</span>
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.1313 9.75H3V8.25H12.1313L7.93125 4.05L9 3L15 9L9 15L7.93125 13.95L12.1313 9.75Z"
+                    fill="currentColor" class="text-purple-600"></path>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
+
+        <!-- Feature 4: UI/UX Design -->
         <div
-          class="flex flex-col rounded-xl border border-gray-700 bg-gray-800 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-indigo-500"
-          data-aos="fade-up" data-aos-delay="500">
-          <h3 class="mb-3 text-2xl font-bold text-indigo-400">Seamless Form Integration</h3>
-          <p class="mb-6 text-gray-300 leading-relaxed">
-            I seamlessly integrate powerful contact forms with services like <strong>Formspree</strong> to help you
-            capture leads, feedback, and inquiries efficiently and reliably.
-          </p>
-          <a href="#contact"
-            class="mt-auto inline-flex items-center text-indigo-500 font-semibold transition-colors duration-200 hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
-            Contact Me
-            <svg class="w-4 h-4 ml-1 transform transition-transform duration-200 group-hover:translate-x-1" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          class="group shadow-sm rounded-3xl shadow-xl/30 border-2 border-gray-500 overflow-hidden bg-gradient-to-br from-[#2d1b4e] to-[#1a0f2e] p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="700" data-aos-duration="500">
+          <div
+            class="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+              <path d="M2 2l7.5 1.5"></path>
+              <path d="M7.5 3.5L19 12"></path>
             </svg>
-          </a>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-xl font-bold text-orange-500 mb-3">UI/UX Design</h3>
+            <p class="text-gray-200 leading-relaxed mb-6">
+              Converting complex requirements into intuitive user journeys and high-fidelity prototypes.
+            </p>
+            <button
+              class="flex cursor-pointer items-center justify-between w-full p-4 border-2 border-orange-600 bg-orange-600 rounded-2xl group/btn hover:bg-transparent transition-all duration-300">
+              <span class="font-semibold group-hover/btn:text-white">Design Style</span>
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.1313 9.75H3V8.25H12.1313L7.93125 4.05L9 3L15 9L9 15L7.93125 13.95L12.1313 9.75Z"
+                    fill="currentColor" class="text-orange-600"></path>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
+
+        <!-- Feature 5: Mobile First -->
         <div
-          class="flex flex-col rounded-xl border border-gray-700 bg-gray-800 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-indigo-500"
-          data-aos="fade-up" data-aos-delay="600">
-          <h3 class="mb-3 text-2xl font-bold text-indigo-400">On-Page SEO Optimization</h3>
-          <p class="mb-6 text-gray-300 leading-relaxed">
-            I optimize your website's fundamental structure, content, and performance elements to improve its organic
-            <strong>visibility</strong> and climb higher in search engine rankings.
-          </p>
-          <a href="#contact"
-            class="mt-auto inline-flex items-center text-indigo-500 font-semibold transition-colors duration-200 hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
-            Let's Discuss
-            <svg class="w-4 h-4 ml-1 transform transition-transform duration-200 group-hover:translate-x-1" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          class="group shadow-sm rounded-3xl shadow-xl/30 border-2 border-gray-500 overflow-hidden bg-gradient-to-br from-[#2d1b4e] to-[#1a0f2e] p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="900" data-aos-duration="500">
+          <div
+            class="w-14 h-14 bg-rose-50 rounded-2xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
             </svg>
-          </a>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-xl font-bold text-rose-500 mb-3">Mobile-First Apps</h3>
+            <p class="text-gray-200 leading-relaxed mb-6">
+              Developing seamless experiences across all screen sizes, from smartphones to ultra-wide monitors.
+            </p>
+            <button
+              class="flex cursor-pointer items-center justify-between w-full p-4 border-2 border-rose-600 bg-rose-600 rounded-2xl group/btn hover:bg-transparent transition-all duration-300">
+              <span class="font-semibold group-hover/btn:text-white">Responsive Lab</span>
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.1313 9.75H3V8.25H12.1313L7.93125 4.05L9 3L15 9L9 15L7.93125 13.95L12.1313 9.75Z"
+                    fill="currentColor" class="text-rose-600"></path>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
+
+        <!-- Feature 6: Cloud Deployment -->
         <div
-          class="flex flex-col rounded-xl border border-gray-700 bg-gray-800 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-indigo-500"
-          data-aos="fade-up" data-aos-delay="700">
-          <h3 class="mb-3 text-2xl font-bold text-indigo-400">Website Performance Tuning</h3>
-          <p class="mb-6 text-gray-300 leading-relaxed">
-            I rigorously focus on optimizing loading speed, implementing efficient image strategies, and applying best
-            practices to ensure a blazing-fast site and superior <strong>user experience</strong>.
-          </p>
-          <a href="404.html"
-            class="mt-auto inline-flex items-center text-indigo-500 font-semibold transition-colors duration-200 hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
-            View Case Studies
-            <svg class="w-4 h-4 ml-1 transform transition-transform duration-200 group-hover:translate-x-1" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          class="group shadow-sm rounded-3xl shadow-xl/30 border-2 border-gray-500 overflow-hidden bg-gradient-to-br from-[#2d1b4e] to-[#1a0f2e] p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="1100" data-aos-duration="500">
+          <div
+            class="w-14 h-14 bg-cyan-50 rounded-2xl flex items-center justify-center text-cyan-600 group-hover:bg-cyan-600 group-hover:text-white transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.5 19a4.5 4.5 0 0 1-1.77-8.64 7 7 0 0 1 12.61-3.22 5.5 5.5 0 1 1-1.34 10.86L17.5 19z"></path>
             </svg>
-          </a>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-xl font-bold text-cyan-500 mb-3">DevOps & Cloud</h3>
+            <p class="text-gray-200 leading-relaxed mb-6">
+              Deploying and managing applications on AWS, Vercel, or Netlify with CI/CD automation.
+            </p>
+            <button
+              class="flex cursor-pointer items-center justify-between w-full p-4 border-2 border-cyan-600 bg-cyan-600 rounded-2xl group/btn hover:bg-transparent transition-all duration-300">
+              <span class="font-semibold group-hover/btn:text-white">Live Demos</span>
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.1313 9.75H3V8.25H12.1313L7.93125 4.05L9 3L15 9L9 15L7.93125 13.95L12.1313 9.75Z"
+                    fill="currentColor" class="text-cyan-600"></path>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
+
   <!-- FAQ Section -->
   <section id="faq" class="scroll-mt-12 py-16 md:py-24 px-6 md:px-12 lg:px-20 max-w-4xl mx-auto">
     <div class="mb-12 md:mb-16" data-aos="fade-up" data-aos-delay="100">
@@ -819,7 +1057,8 @@
       thankYouOverlay.classList.add('hidden');
     });
   </script>
-  <script>
+
+  <!-- <script>
     // Disable right-click context menu
     document.addEventListener('contextmenu', function (e) {
       e.preventDefault();
@@ -847,7 +1086,7 @@
         return false;
       }
     });
-  </script>
+  </script> -->
 </body>
 
 </html>
