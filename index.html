@@ -1365,32 +1365,32 @@
 
   <script>
     // Disable right-click context menu
-    document.addEventListener('contextmenu', function (e) {
-      e.preventDefault();
-    });
+    // document.addEventListener('contextmenu', function (e) {
+    //   e.preventDefault();
+    // });
 
-    // Disable developer tools and view source
-    document.addEventListener('keydown', function (e) {
-      const key = e.key.toLowerCase();
+    // // Disable developer tools and view source
+    // document.addEventListener('keydown', function (e) {
+    //   const key = e.key.toLowerCase();
 
-      // F12
-      if (key === 'f12') {
-        e.preventDefault();
-        return false;
-      }
+    //   // F12
+    //   if (key === 'f12') {
+    //     e.preventDefault();
+    //     return false;
+    //   }
 
-      // Ctrl/Cmd + Shift + I/J/C
-      if ((e.ctrlKey || e.metaKey) && e.shiftKey && ['i', 'j', 'c'].includes(key)) {
-        e.preventDefault();
-        return false;
-      }
+    //   // Ctrl/Cmd + Shift + I/J/C
+    //   if ((e.ctrlKey || e.metaKey) && e.shiftKey && ['i', 'j', 'c'].includes(key)) {
+    //     e.preventDefault();
+    //     return false;
+    //   }
 
-      // Ctrl/Cmd + U or Ctrl/Cmd + S
-      if ((e.ctrlKey || e.metaKey) && ['u', 's'].includes(key)) {
-        e.preventDefault();
-        return false;
-      }
-    });
+    //   // Ctrl/Cmd + U or Ctrl/Cmd + S
+    //   if ((e.ctrlKey || e.metaKey) && ['u', 's'].includes(key)) {
+    //     e.preventDefault();
+    //     return false;
+    //   }
+    // });
   </script>
 </body>
 
