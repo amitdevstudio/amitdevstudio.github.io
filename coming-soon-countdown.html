@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming Soon — Launching Soon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0d0b14;
+        --bg-2: #151020;
+        --line: rgba(255, 255, 255, 0.08);
+        --text: #f4f2fa;
+        --muted: #9089a8;
+        --accent: #ff5a3c;
+        --accent-2: #7c5cff;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        background:
+          radial-gradient(
+            1200px 600px at 15% -10%,
+            rgba(124, 92, 255, 0.25),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 500px at 100% 10%,
+            rgba(255, 90, 60, 0.18),
+            transparent 55%
+          ),
+          var(--bg);
+        color: var(--text);
+        font-family: "Space Grotesk", sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 20px;
+        overflow-x: hidden;
+        position: relative;
+      }
+      .grid-overlay {
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+          linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+          );
+        background-size: 56px 56px;
+        pointer-events: none;
+        mask-image: radial-gradient(circle at 50% 30%, black, transparent 75%);
+      }
+      .wrap {
+        width: 100%;
+        max-width: 760px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        background: rgba(255, 90, 60, 0.08);
+        border: 1px solid rgba(255, 90, 60, 0.25);
+        padding: 7px 14px;
+        border-radius: 999px;
+        margin-bottom: 28px;
+      }
+      .eyebrow .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 0 0 rgba(255, 90, 60, 0.6);
+        animation: pulse 1.8s ease-out infinite;
+      }
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(255, 90, 60, 0.55);
+        }
+        70% {
+          box-shadow: 0 0 0 8px rgba(255, 90, 60, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(255, 90, 60, 0);
+        }
+      }
+      h1 {
+        font-size: clamp(2.2rem, 6vw, 4rem);
+        font-weight: 700;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+      }
+      h1 span {
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .sub {
+        color: var(--muted);
+        font-size: clamp(0.95rem, 2vw, 1.1rem);
+        max-width: 520px;
+        margin: 0 auto 44px;
+        line-height: 1.6;
+      }
+
+      .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+      .unit {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.05),
+          rgba(255, 255, 255, 0.02)
+        );
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 18px 14px;
+        min-width: 88px;
+        backdrop-filter: blur(6px);
+        position: relative;
+        overflow: hidden;
+      }
+      .unit::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+      }
+      .unit .num {
+        font-family: "JetBrains Mono", monospace;
+        font-size: clamp(1.8rem, 5vw, 2.6rem);
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+        line-height: 1;
+        background: linear-gradient(180deg, #fff, #cfc9e0);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .unit .label {
+        margin-top: 8px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .sep {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        color: var(--line);
+        font-weight: 300;
+      }
+
+      .launch-date {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 13px;
+        color: var(--muted);
+        margin-bottom: 40px;
+        letter-spacing: 0.03em;
+      }
+      .launch-date strong {
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      form {
+        display: flex;
+        gap: 10px;
+        max-width: 420px;
+        margin: 0 auto 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      input[type="email"] {
+        flex: 1;
+        min-width: 220px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 13px 16px;
+        color: var(--text);
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 14px;
+        outline: none;
+        transition:
+          border-color 0.2s ease,
+          background 0.2s ease;
+      }
+      input[type="email"]::placeholder {
+        color: var(--muted);
+      }
+      input[type="email"]:focus {
+        border-color: var(--accent-2);
+        background: rgba(255, 255, 255, 0.06);
+      }
+      button {
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        border: none;
+        border-radius: 10px;
+        padding: 13px 24px;
+        color: #fff;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        transition:
+          transform 0.15s ease,
+          opacity 0.15s ease;
+      }
+      button:hover {
+        transform: translateY(-1px);
+        opacity: 0.92;
+      }
+      button:active {
+        transform: translateY(0);
+      }
+      .msg {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 13px;
+        color: #8fe3a3;
+        min-height: 18px;
+        margin-bottom: 28px;
+      }
+      .msg.error {
+        color: #ff8a7a;
+      }
+
+      .socials {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+      }
+      .socials a {
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        color: var(--muted);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .socials a:hover {
+        color: var(--text);
+        border-color: var(--accent-2);
+        background: rgba(124, 92, 255, 0.1);
+      }
+      .socials svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+
+      @media (max-width: 480px) {
+        .unit {
+          min-width: 70px;
+          padding: 14px 8px;
+        }
+        .sep {
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-overlay"></div>
+
+    <div class="wrap">
+      <span class="eyebrow mt-8"><span class="dot"></span>Launching soon</span>
+
+      <h1>Something new is<br /><span>almost ready</span>.</h1>
+      <p class="sub">
+        We're putting the final touches on this project. Drop your email below
+        and you'll be the first to know the moment it's live.
+      </p>
+
+      <div class="countdown" id="countdown">
+        <div class="unit">
+          <div class="num" id="days">00</div>
+          <div class="label">Days</div>
+        </div>
+        <div class="sep">:</div>
+        <div class="unit">
+          <div class="num" id="hours">00</div>
+          <div class="label">Hours</div>
+        </div>
+        <div class="sep">:</div>
+        <div class="unit">
+          <div class="num" id="minutes">00</div>
+          <div class="label">Min</div>
+        </div>
+        <div class="sep">:</div>
+        <div class="unit">
+          <div class="num" id="seconds">00</div>
+          <div class="label">Sec</div>
+        </div>
+      </div>
+
+      <p class="launch-date">
+        Launching <strong id="launchDateLabel">—</strong>
+      </p>
+
+      <form
+        id="notifyForm"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+      >
+        <input
+          type="email"
+          name="email"
+          placeholder="you@email.com"
+          required
+          autocomplete="off"
+        />
+        <button type="submit" id="notifyBtn">Notify me</button>
+      </form>
+      <p class="msg" id="notifyMsg"></p>
+
+      <div class="socials">
+        <a href="#" aria-label="GitHub"
+          ><svg viewBox="0 0 24 24">
+            <path
+              d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.28 1.2-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.75.81 1.2 1.83 1.2 3.09 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.07.78 2.16v3.2c0 .31.21.66.79.55A10.5 10.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"
+            /></svg
+        ></a>
+        <a href="#" aria-label="X"
+          ><svg viewBox="0 0 24 24">
+            <path
+              d="M18.3 2H21l-6.7 7.65L22.2 22h-6.2l-4.9-6.4L5.4 22H2.7l7.2-8.24L1.8 2h6.3l4.4 5.86L18.3 2Zm-1.1 18h1.7L7.9 3.9H6.1L17.2 20Z"
+            /></svg
+        ></a>
+        <a href="#" aria-label="LinkedIn"
+          ><svg viewBox="0 0 24 24">
+            <path
+              d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM.5 8.98h4V23h-4V8.98ZM8.5 8.98h3.83v1.92h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V23h-4v-6.28c0-1.5-.03-3.42-2.08-3.42-2.09 0-2.41 1.63-2.41 3.31V23h-4V8.98Z"
+            /></svg
+        ></a>
+      </div>
+    </div>
+
+    <script>
+      // Set your confirmed launch date/time here (local time)
+      const launchDate = new Date("2082-07-19T09:00:00"); // Year-Month-DayTHour:Minute:Second
+
+      // If the launch time has already passed, skip the countdown entirely —
+      // this works for EVERY visitor since it checks the date itself,
+      // not a per-browser flag.
+      if (new Date() >= launchDate) {
+        window.location.replace("index.html");
+      }
+    </script>
+    <script>
+      const labelOpts = { year: "numeric", month: "long", day: "numeric" };
+      document.getElementById("launchDateLabel").textContent =
+        launchDate.toLocaleDateString(undefined, labelOpts);
+
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
+
+      function pad(n) {
+        return String(n).padStart(2, "0");
+      }
+
+      function tick() {
+        const now = new Date();
+        let diff = launchDate - now;
+
+        if (diff <= 0) {
+          daysEl.textContent = "00";
+          hoursEl.textContent = "00";
+          minutesEl.textContent = "00";
+          secondsEl.textContent = "00";
+          document.querySelector(".sub").textContent =
+            "We've just launched — redirecting you now...";
+          clearInterval(timer);
+
+          setTimeout(() => {
+            window.location.replace("index.html");
+          }, 1500);
+          return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        diff -= d * (1000 * 60 * 60 * 24);
+        const h = Math.floor(diff / (1000 * 60 * 60));
+        diff -= h * (1000 * 60 * 60);
+        const m = Math.floor(diff / (1000 * 60));
+        diff -= m * (1000 * 60);
+        const s = Math.floor(diff / 1000);
+
+        daysEl.textContent = pad(d);
+        hoursEl.textContent = pad(h);
+        minutesEl.textContent = pad(m);
+        secondsEl.textContent = pad(s);
+      }
+
+      let timer;
+      tick();
+      timer = setInterval(tick, 1000);
+
+      // Notify form
+      const notifyForm = document.getElementById("notifyForm");
+      const notifyMsg = document.getElementById("notifyMsg");
+      const notifyBtn = document.getElementById("notifyBtn");
+
+      notifyForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(notifyForm);
+        notifyBtn.disabled = true;
+        notifyBtn.textContent = "Sending...";
+
+        try {
+          const res = await fetch(notifyForm.action, {
+            method: "POST",
+            body: formData,
+            headers: { Accept: "application/json" },
+          });
+          if (res.ok) {
+            notifyMsg.textContent =
+              "You're on the list — we'll email you at launch.";
+            notifyMsg.classList.remove("error");
+            notifyForm.reset();
+          } else {
+            notifyMsg.textContent = "Something went wrong. Please try again.";
+            notifyMsg.classList.add("error");
+          }
+        } catch (err) {
+          notifyMsg.textContent = "Something went wrong. Please try again.";
+          notifyMsg.classList.add("error");
+        } finally {
+          notifyBtn.disabled = false;
+          notifyBtn.textContent = "Notify me";
+        }
+      });
+    </script>
+  </body>
+</html>
