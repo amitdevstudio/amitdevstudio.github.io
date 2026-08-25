@@ -17,6 +17,20 @@
     body {
       overflow-x: hidden;
     }
+
+    .tab-btn.active {
+      color: white;
+      background-image: linear-gradient(to right, #f472b6, #f87171);
+      border-color: transparent;
+    }
+
+    .skill-card {
+      transition: transform .3s ease, border-color .3s ease, opacity .3s ease;
+    }
+
+    .skill-card.is-hidden {
+      display: none;
+    }
   </style>
 
 </head>
@@ -34,18 +48,25 @@
           class="bg-clip-text text-transparent bg-linear-to-r from-red-400 to-pink-400">Studio</span>
       </a>
 
-      <ul class="hidden md:flex space-x-8 text-lg text-white">
+      <ul class="hidden md:flex space-x-6 lg:space-x-8 text-base lg:text-lg text-white">
         <li><a href="#home"
             class="relative py-1 hover:text-pink-400 transition-colors duration-200 after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-0.5 after:bg-linear-to-r after:from-pink-400 after:to-red-400 after:transition-all after:duration-300">Home</a>
         </li>
         <li><a href="#about"
             class="relative py-1 hover:text-pink-400 transition-colors duration-200 after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-0.5 after:bg-linear-to-r after:from-pink-400 after:to-red-400 after:transition-all after:duration-300">About</a>
         </li>
+        <li><a href="#skills"
+            class="relative py-1 hover:text-pink-400 transition-colors duration-200 after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-0.5 after:bg-linear-to-r after:from-pink-400 after:to-red-400 after:transition-all after:duration-300">Tech
+            Stack</a>
+        </li>
         <li><a href="#projects"
             class="relative py-1 hover:text-pink-400 transition-colors duration-200 after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-0.5 after:bg-linear-to-r after:from-pink-400 after:to-red-400 after:transition-all after:duration-300">Projects</a>
         </li>
         <li><a href="#services"
             class="relative py-1 hover:text-pink-400 transition-colors duration-200 after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-0.5 after:bg-linear-to-r after:from-pink-400 after:to-red-400 after:transition-all after:duration-300">Services</a>
+        </li>
+        <li><a href="#certificates"
+            class="relative py-1 hover:text-pink-400 transition-colors duration-200 after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-0.5 after:bg-linear-to-r after:from-pink-400 after:to-red-400 after:transition-all after:duration-300">Certificates</a>
         </li>
         <li><a href="#faq"
             class="relative py-1 hover:text-pink-400 transition-colors duration-200 after:absolute after:left-0 after:-bottom-1 after:w-0 hover:after:w-full after:h-0.5 after:bg-linear-to-r after:from-pink-400 after:to-red-400 after:transition-all after:duration-300">FAQ</a>
@@ -65,7 +86,7 @@
     <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40" aria-hidden="true"></div>
 
     <div id="mobile-menu"
-      class="fixed top-0 left-0 h-full w-64 bg-[#1e0e3f] text-white transform -translate-x-full transition-transform duration-300 z-50 p-6 md:hidden border-r border-white/10 shadow-2xl"
+      class="fixed top-0 left-0 h-full w-64 bg-[#1e0e3f] text-white transform -translate-x-full transition-transform duration-300 z-50 p-6 md:hidden border-r border-white/10 shadow-2xl overflow-y-auto"
       role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
       <div class="flex justify-end mb-6">
         <button id="menu-close"
@@ -82,11 +103,18 @@
         <li><a href="#about"
             class="block w-full rounded-lg hover:bg-white/5 hover:text-pink-400 transition-colors duration-200 py-2">About</a>
         </li>
+        <li><a href="#skills"
+            class="block w-full rounded-lg hover:bg-white/5 hover:text-pink-400 transition-colors duration-200 py-2">Tech
+            Stack</a>
+        </li>
         <li><a href="#projects"
             class="block w-full rounded-lg hover:bg-white/5 hover:text-pink-400 transition-colors duration-200 py-2">Projects</a>
         </li>
         <li><a href="#services"
             class="block w-full rounded-lg hover:bg-white/5 hover:text-pink-400 transition-colors duration-200 py-2">Services</a>
+        </li>
+        <li><a href="#certificates"
+            class="block w-full rounded-lg hover:bg-white/5 hover:text-pink-400 transition-colors duration-200 py-2">Certificates</a>
         </li>
         <li><a href="#faq"
             class="block w-full rounded-lg hover:bg-white/5 hover:text-pink-400 transition-colors duration-200 py-2">FAQ</a>
@@ -160,7 +188,7 @@
             <div
               class="absolute -inset-1.5 rounded-full bg-linear-to-br from-purple-400 via-pink-400 to-red-400 opacity-60 blur-lg">
             </div>
-            <img class="relative object-cover object-center rounded-full shadow-lg border-4 border-[#1e0e3f] w-full"
+            <img class="relative object-cover object-center rounded-full shadow-lg border-0 border-[#1e0e3f] w-full"
               alt="Amit Kumar - Frontend Developer" src="assets/images/amitkumar.jpg">
           </div>
         </div>
@@ -216,6 +244,88 @@
         </div>
       </div>
     </section>
+
+    <!-- Tech Stack Section -->
+    <section id="skills" class="scroll-mt-20 py-16 md:py-20 px-6 md:px-12 lg:px-24">
+      <div class="max-w-6xl mx-auto">
+
+        <div class="text-center">
+          <span class="text-sm font-semibold tracking-widest text-pink-400 uppercase">My Toolbox</span>
+          <h2
+            class="mt-2 text-3xl font-extrabold inline-block relative
+            after:absolute after:w-4/6 after:h-1 after:left-0 after:right-0
+            after:-bottom-4 after:mx-auto after:bg-linear-to-r after:from-pink-400 after:to-red-400 after:rounded-full">
+            Tech Stack
+          </h2>
+          <p class="mt-8 max-w-2xl mx-auto text-gray-300 leading-relaxed">
+            The languages, frameworks, and tools I use to design, build, and ship polished web experiences.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap justify-center gap-3 mt-10">
+          <button data-filter="all"
+            class="tab-btn active px-5 py-2 rounded-full text-sm font-semibold border border-white/15 bg-white/5 hover:border-pink-400/50 transition-all duration-300">
+            All
+          </button>
+          <button data-filter="language"
+            class="tab-btn px-5 py-2 rounded-full text-sm font-semibold border border-white/15 bg-white/5 hover:border-pink-400/50 transition-all duration-300">
+            Languages
+          </button>
+          <button data-filter="framework"
+            class="tab-btn px-5 py-2 rounded-full text-sm font-semibold border border-white/15 bg-white/5 hover:border-pink-400/50 transition-all duration-300">
+            Frameworks &amp; Libraries
+          </button>
+          <button data-filter="tool"
+            class="tab-btn px-5 py-2 rounded-full text-sm font-semibold border border-white/15 bg-white/5 hover:border-pink-400/50 transition-all duration-300">
+            Tools &amp; Platform
+          </button>
+        </div>
+
+        <!-- Skill Icon Grid -->
+        <div id="skill-grid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5 mt-12">
+
+          <!-- HTML5 -->
+          <div
+            class="skill-card group relative flex items-center justify-center gap-3 rounded-2xl border border-white/10 bg-linear-to-br from-[#2d1b4e] to-[#1a0f2e] p-2 hover:border-orange-400/50 hover:-translate-y-1.5"
+            data-category="language" title="HTML5 — Advanced">
+            <i
+              class="fa-brands fa-html5 text-4xl text-orange-500 group-hover:scale-110 transition-transform duration-300"></i>
+            <span class="text-sm font-medium text-gray-200">HTML5</span>
+          </div>
+
+          <!-- CSS3 -->
+          <div
+            class="skill-card group relative flex items-center justify-center gap-3 rounded-2xl border border-white/10 bg-linear-to-br from-[#2d1b4e] to-[#1a0f2e] p-2 hover:border-blue-400/50 hover:-translate-y-1.5"
+            data-category="language" title="CSS3 — Advanced">
+            <i
+              class="fa-brands fa-css3-alt text-4xl text-blue-500 group-hover:scale-110 transition-transform duration-300"></i>
+            <span class="text-sm font-medium text-gray-200">CSS3</span>
+          </div>
+
+          <!-- JavaScript -->
+          <div
+            class="skill-card group relative flex items-center justify-center gap-3 rounded-2xl border border-white/10 bg-linear-to-br from-[#2d1b4e] to-[#1a0f2e] p-2 hover:border-yellow-400/50 hover:-translate-y-1.5"
+            data-category="language" title="JavaScript (ES6+) — Proficient">
+            <i
+              class="fa-brands fa-js text-4xl text-yellow-400 group-hover:scale-110 transition-transform duration-300"></i>
+            <span class="text-sm font-medium text-gray-200">JavaScript</span>
+          </div>
+
+          <!-- Tailwind CSS -->
+          <div
+            class="skill-card group relative flex items-center justify-center gap-3 rounded-2xl border border-white/10 bg-linear-to-br from-[#2d1b4e] to-[#1a0f2e] p-2 hover:border-cyan-400/50 hover:-translate-y-1.5"
+            data-category="framework" title="Tailwind CSS — Advanced">
+            <i
+              class="fa-solid fa-wind text-4xl text-cyan-400 group-hover:scale-110 transition-transform duration-300"></i>
+            <span class="text-sm font-medium text-gray-200 text-center">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <p id="empty-state" class="hidden text-center text-gray-400 mt-10">No skills in this category yet.</p>
+      </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects" class="scroll-mt-8 py-20 md:py-20 px-6 md:px-12 lg:px-24">
       <div class="max-w-6xl mx-auto px-4">
@@ -241,8 +351,8 @@
               class="relative h-full rounded-2xl overflow-hidden bg-linear-to-br from-[#2d1b4e] to-[#1a0f2e] shadow-xl/30">
 
               <div class="relative aspect-video overflow-hidden">
-                <img src="assets/images/project1.png"
-                  srcset="assets/images/project1.png 1600w, assets/images/project1.png 800w"
+                <img src="/amitdevstudio.github.io-main/assets/images/project1.png"
+                  srcset="/amitdevstudio.github.io-main/assets/images/project1.png 1600w, /amitdevstudio.github.io-main/assets/images/project1.png 800w"
                   sizes="(max-width: 768px) 100vw, 500px" alt="Project Preview"
                   class="w-full h-full object-cover ..." />
                 <div class="absolute inset-0 bg-linear-to-t from-[#1a0f2e] via-transparent to-transparent opacity-60">
@@ -504,6 +614,29 @@
           </div>
 
         </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="scroll-mt-12 py-16 md:py-20 px-6 md:px-12 lg:px-24">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center">
+          <span class="text-sm font-semibold tracking-widest text-pink-400 uppercase" data-aos="fade-up"
+            data-aos-delay="50" data-aos-duration="300">Credentials</span>
+          <h2 class="mt-2 text-3xl font-extrabold inline-block relative 
+        after:absolute after:w-4/6 after:h-1 after:left-0 after:right-0
+        after:-bottom-4 after:mx-auto after:bg-linear-to-r after:from-pink-400 after:to-red-400 after:rounded-full"
+            data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
+            Certificates
+          </h2>
+          <p class="mt-8 max-w-2xl mx-auto text-gray-300 leading-relaxed" data-aos="fade-up" data-aos-delay="150"
+            data-aos-duration="300">
+            Replace these sample entries with your own certificates — update the title, issuer, date, and link for
+            each one.
+          </p>
+        </div>
+
+        <h4 class="mt-8 text-3xl font-extrabold text-center" data-aos="zoom-in" data-aos-delay="250" data-aos-duration="800">Coming Soon...!</h4>
       </div>
     </section>
 
@@ -843,16 +976,20 @@
                 <a href="#about" class="transition duration-100 hover:text-white hover:underline">About</a>
               </div>
               <div>
-                <a href="#projects"
-                  class="transition duration-100 hover:text-white hover:underline">Projects</a>
+                <a href="#skills" class="transition duration-100 hover:text-white hover:underline">Tech Stack</a>
               </div>
               <div>
-                <a href="#services"
-                  class="transition duration-100 hover:text-white hover:underline">Services</a>
+                <a href="#projects" class="transition duration-100 hover:text-white hover:underline">Projects</a>
               </div>
               <div>
-                <a href="#contact"
-                  class="transition duration-100 hover:text-white hover:underline">Contact</a>
+                <a href="#services" class="transition duration-100 hover:text-white hover:underline">Services</a>
+              </div>
+              <div>
+                <a href="#certificates"
+                  class="transition duration-100 hover:text-white hover:underline">Certificates</a>
+              </div>
+              <div>
+                <a href="#contact" class="transition duration-100 hover:text-white hover:underline">Contact</a>
               </div>
             </nav>
           </div>
@@ -862,7 +999,7 @@
             <div class="mb-4 font-bold uppercase tracking-widest">Projects</div>
             <nav class="flex flex-col gap-4 text-gray-400">
               <a href="https://github.com/amitdevstudio/soleforge.github.io" target="_blank"
-                  class="transition duration-100 hover:text-white hover:underline">SoleForge — Footwear Landing Page</a>
+                class="transition duration-100 hover:text-white hover:underline">SoleForge — Footwear Landing Page</a>
             </nav>
           </div>
           <!-- nav - end -->
@@ -871,8 +1008,7 @@
             <div class="mb-4 font-bold uppercase tracking-widest">Services</div>
             <nav class="flex flex-col gap-4 text-gray-400">
               <div>
-                <a href="404.html"
-                  class="transition duration-100 hover:text-white hover:underline">Responsive
+                <a href="404.html" class="transition duration-100 hover:text-white hover:underline">Responsive
                   Web Design</a>
               </div>
               <div>
@@ -880,8 +1016,7 @@
                   Pages</a>
               </div>
               <div>
-                <a href="404.html"
-                  class="transition duration-100 hover:text-white hover:underline">Portfolio
+                <a href="404.html" class="transition duration-100 hover:text-white hover:underline">Portfolio
                   Websites</a>
               </div>
               <div>
@@ -893,8 +1028,7 @@
                   Basics</a>
               </div>
               <div>
-                <a href="404.html"
-                  class="transition duration-100 hover:text-white hover:underline">Performance
+                <a href="404.html" class="transition duration-100 hover:text-white hover:underline">Performance
                   Optimization</a>
               </div>
             </nav>
@@ -905,18 +1039,15 @@
             <div class="mb-4 font-bold uppercase tracking-widest">Follow</div>
             <nav class="flex flex-col gap-4 text-gray-400">
               <div>
-                <a href="404.html"
-                  class="transition duration-100 flex items-center hover:text-white hover:underline">
+                <a href="404.html" class="transition duration-100 flex items-center hover:text-white hover:underline">
                   <span><i class="fa-brands mr-2 fa-instagram"></i></span> Instagram</a>
               </div>
               <div>
-                <a href="404.html"
-                  class="transition duration-100 flex items-center hover:text-white hover:underline">
+                <a href="404.html" class="transition duration-100 flex items-center hover:text-white hover:underline">
                   <span><i class="fa-brands mr-2 fa-facebook"></i></span> Facebook</a>
               </div>
               <div>
-                <a href="404.html"
-                  class="transition duration-100 flex items-center hover:text-white hover:underline">
+                <a href="404.html" class="transition duration-100 flex items-center hover:text-white hover:underline">
                   <span><i class="fa-brands mr-2 fa-github"></i></span> Github</a>
               </div>
             </nav>
@@ -1081,6 +1212,48 @@
         newsletterBtn.textContent = 'Send';
       }
     });
+  </script>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const cards = document.querySelectorAll('.skill-card');
+    const emptyState = document.getElementById('empty-state');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const match = filter === 'all' || card.dataset.category === filter;
+          card.classList.toggle('is-hidden', !match);
+          if (match) visibleCount++;
+        });
+
+        emptyState.classList.toggle('hidden', visibleCount > 0);
+      });
+    });
+  </script>
+
+  <script>
+    // Global console branding
+    console.log(
+      "%c🚀 AmitDevStudio",
+      "color:#ec4899;font-size:20px;font-weight:800;"
+    );
+
+    console.log(
+      "%c✓ Portfolio initialized successfully\n✓ All systems are ready",
+      "color:#22c55e;font-size:13px;font-weight:600;"
+    );
+
+    console.log(
+      "%cThanks for checking the console 👀",
+      "color:#a855f7;font-size:12px;"
+    );
   </script>
 
   <script>
